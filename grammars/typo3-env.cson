@@ -1,0 +1,64 @@
+# If this is your first time writing a language grammar, check out:
+#   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+
+'scopeName': 'source.env'
+'name': 'TYPO3 Env'
+'fileTypes': [
+  'env'
+]
+'patterns': [
+  {
+    'begin': '(^[ \\t]+)?(?=#)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.env'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '#'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.env'
+        'end': '\\n'
+        'name': 'comment.line.number-sign.env'
+      }
+    ]
+  }
+  {
+    'match': '^\\s*(.*)\\s*(=)'
+    'name': 'entity.other.env'
+    'captures':
+      '1':
+        'name': 'keyword.other.env'
+      '2':
+        'name': 'punctuation.separator.key-value.env'
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.env'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.env'
+    'name': 'string.quoted.single.env'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.env'
+      }
+    ]
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.env'
+    'end': '[!^\\"](?!.*\")'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.env'
+    'name': 'string.quoted.double.env'
+  }
+]

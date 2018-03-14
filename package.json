@@ -1,0 +1,14 @@
+{
+  "name": "language-typo3-env",
+  "version": "0.0.1",
+  "description": "Grammar for TYPO3 .env files",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/philicevic/language-typo3-env",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
