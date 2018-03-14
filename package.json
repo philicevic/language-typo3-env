@@ -1,6 +1,6 @@
 {
   "name": "language-typo3-env",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Grammar for TYPO3 .env files",
   "keywords": [
     "language",
