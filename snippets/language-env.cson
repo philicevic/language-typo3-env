@@ -25,3 +25,15 @@
       # GFX_PROCESSOR_PATH = ''
       # GFX_PROCESSOR_PATH_LZW = ''
     """
+  'DB_NAME':
+    'prefix': 'DB_NAME'
+    'body': 'DB_NAME = \'$1\''
+  'DB_HOST':
+    'prefix': 'DB_HOST'
+    'body': 'DB_HOST = \'${1:127.0.0.1}\''
+  'DB_USER':
+    'prefix': 'DB_USER'
+    'body': 'DB_USER = \'$1\''
+  'DB_PASS':
+    'prefix': 'DB_PASS'
+    'body': 'DB_PASS = \'$1\''
