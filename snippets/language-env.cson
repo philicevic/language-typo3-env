@@ -2,6 +2,26 @@
 # https://github.com/atom/language-javascript/blob/master/snippets/javascript.cson
 
 '.source.env':
-  'Method documentation':
-    'prefix': 'doc'
-    'body': '@@ ${1:method} - ${2:description}'
+  'TYPO3 .env':
+    'prefix': 'env'
+    'body': """
+      # .env file for TYPO3
+      # you can use the data of this file with the getenv() function
+
+      # Password for install tool
+      INSTALL_PASSWORD = '$P$CNXxfYUxQlniPkqxybvzg3TNTkNF64/' # default: joh316
+
+      # Database
+      DB_NAME = '$1'
+      DB_HOST = '${2:127.0.0.1}'
+      DB_PASS = '$3'
+      DB_CHARSET = 'utf8'
+      DB_DRIVER = 'mysqli'
+      DB_USER = '$4'
+
+      SITENAME = '$5'
+
+      # Path to ImageMagick
+      # GFX_PROCESSOR_PATH = ''
+      # GFX_PROCESSOR_PATH_LZW = ''
+    """
